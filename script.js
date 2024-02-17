@@ -1,14 +1,14 @@
-// Assignment Code
-var generateBtn = document.querySelector("#generate");
+function generatePassword() {
+    var passwordlength = prompt("Enter the length of the password (between 8 and 128 characters):");
 
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-
+    if (passwordLength < 8 || passwordLength > 128 || isNaN(passwordLength)) {
+        alert("Please enter a valid password length between 8 and 128 characters.");
+        return;
 }
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+  var includeLowercase = confirm("Include lowercase letters?");
+  var includeUppercase = confirm("Include uppercase letters?");
+  var includeNumeric = confirm("Include numeric characters?");
+  var includeSpecial = confirm("Include special characters?");
+
+
